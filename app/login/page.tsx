@@ -1,5 +1,5 @@
+"use client";
 import { Heading1 } from "@/components/Typography";
-import { CardDescription } from "@/components/ui/card";
 import {
   Card,
   CardHeader,

@@ -11,7 +11,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { ThemeToggle } from "./ThemeToogle";
+import ThemeToogle from "@/components/ThemeToogle";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,7 +61,7 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <ThemeToggle />
+          <ThemeToogle />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
