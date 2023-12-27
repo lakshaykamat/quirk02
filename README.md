@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quirk02 - Web Habit Tracker
+
+Welcome to Quirk02, a web-based habit tracker designed to help you build and maintain healthy habits!
+
+## Overview
+
+Quirk02 is a user-friendly application that allows you to track your daily habits, set goals, and monitor your progress over time. Whether you want to develop new habits or break old ones, Quirk02 provides the tools and insights to help you achieve your goals.
+
+## Features
+
+- **Habit Tracking:** Easily create and track your habits on a daily, weekly, or custom schedule.
+- **Goal Setting:** Set achievable goals for each habit to stay motivated and focused.
+- **Progress Monitoring:** Visualize your progress through graphs and statistics.
+- **Reminder Notifications:** Receive timely reminders to help you stay on track with your habits.
+- **Customizable Interface:** Tailor the app to suit your preferences and habit-tracking needs.
 
 ## Getting Started
 
-First, run the development server:
+To use Quirk02, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/quirk02.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies:**
+   ```bash
+   # Go to the project directory
+   cd quirk02
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   # Install dependencies using your package manager (e.g., npm, yarn)
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Run the Application:**
+   ```bash
+   # Start the application
+   npm start
+   ```
 
-## Learn More
+4. **Access the Application:**
+   Open your web browser and visit `http://localhost:3000` to access Quirk02.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We welcome contributions from the community! If you'd like to contribute to Quirk02, please follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Fork the repository.
+2. Create your feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
-## Deploy on Vercel
+Please ensure that your pull request adheres to our [code of conduct](CONTRIBUTING.md) and includes relevant details about the changes you've made.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the [MIT License](LICENSE.md).
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact us at [email@example.com](mailto:email@example.com) or open an issue in the repository.
+
+Thank you for using Quirk02! Happy habit tracking! 🌟
