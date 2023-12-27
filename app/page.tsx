@@ -1,14 +1,13 @@
-import { Heading1 } from "@/components/Typography";
-import React from "react";
+import { Heading1 } from '@/components/Typography'
 
-type Props = {};
+type Props = {}
 
 const Home = (props: Props) => {
   return (
-    <section>
-      <Heading1>Dashboard</Heading1>
-    </section>
-  );
-};
+    <div>
+      <Heading1>Home</Heading1>
+    </div>
+  )
+}
 
-export default Home;
+export default Home

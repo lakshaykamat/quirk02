@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -11,24 +12,57 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import ThemeToogle from "@/components/ThemeToogle";
+import { LoginButtons, UserAvatar } from "./NavBarComponents";
 
 export default function NavBar() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const isLogin = true;
+
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      id:1,
+      path:"/",
+      label:"Home",
+    },
+    {
+      id:2,
+      path:"/dashboard",
+      label:"Dashboard",
+    },
+    {
+      id:3,
+      path:"/habits",
+      label:"Habits"
+    }
   ];
 
+  const navLink = [
+    {
+      id: 1,
+      path: "/",
+      label: "Home",
+    },
+    {
+      id: 2,
+      path: "/dashboard",
+      label: "Dashboard",
+    },
+    {
+      id: 3,
+      path: "/habits",
+      label: "Haibits",
+    },
+  ];
+
+  const allLinks = navLink.map((item) => {
+    return (
+      <NavbarItem key={item.id} isActive={pathname === item.path}>
+        <Link href={item.path}>{item.label}</Link>
+      </NavbarItem>
+    );
+  });
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -38,56 +72,26 @@ export default function NavBar() {
         />
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">QUIRK02</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Dashboard
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
+        {allLinks}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
-          <ThemeToogle />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
+      {isLogin ? <UserAvatar/> : <LoginButtons/>}
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.id}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              color={`${pathname === item.path ? "primary" : "foreground"}`}
               className="w-full"
-              href="#"
+              href={item.path}
               size="lg"
             >
-              {item}
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
@@ -95,14 +99,3 @@ export default function NavBar() {
     </Navbar>
   );
 }
-
-export const AcmeLogo = () => (
-  <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
-    <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
-);
