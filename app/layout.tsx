@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Quirk02 | Web Habit Tracker</title>
       </head>
       <body className={inter.className}>
         <NextUIProvider>
@@ -26,7 +27,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <NavBar />
-            <main className="max-w-7xl mx-auto p-6">{children}</main>
+            <main className="max-w-6xl mx-auto px-6 py-12">{children}</main>
           </ThemeProvider>
         </NextUIProvider>
       </body>

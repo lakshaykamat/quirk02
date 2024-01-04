@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+//TODO Change shadcn dropdown to NextUI dropdown
 export default function ThemeToogle() {
   const { setTheme } = useTheme();
 
