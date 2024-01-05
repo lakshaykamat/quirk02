@@ -1,5 +1,5 @@
 import { Heading1 } from "@/components/Typography";
-import { SAMPALE_HABITS } from "@/public/assets/data/habits";
+import { SAMPALE_HABITS } from "@/public/assets/data";
 import HabitCard from "./HabitCard";
 
 const HabitsPage = () => {

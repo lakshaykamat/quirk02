@@ -3,6 +3,7 @@ export type HabitType = {
   title: string;
   streak: number;
   category: any;
+  description: string;
 };
 export type CategoryType = {
   label: string;

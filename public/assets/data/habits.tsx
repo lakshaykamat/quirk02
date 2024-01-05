@@ -1,20 +1,20 @@
 import { generateUUID } from "@/lib/utils";
 import { Code2, Dumbbell, Smartphone } from "lucide-react";
 
-export const CATEGORIES = {
+const CATEGORIES = {
   gym: {
     label: "Gym and Workout",
-    icon: <Dumbbell className="stroke-gray-200 w-5 h-5" />,
+    icon: <Dumbbell stroke="#e5e7eb" className="stroke-gray-200 w-5 h-5" />,
     color: "#0f766e", //teal-700
   },
   study: {
     label: "Deep work",
-    icon: <Code2 className="stroke-gray-200 w-5 h-5" />,
+    icon: <Code2 stroke="#e5e7eb" className="stroke-gray-200 w-5 h-5" />,
     color: "#a21caf", //sky-700
   },
   gadgets: {
     label: "Electronics",
-    icon: <Smartphone className="stroke-gray-200 w-5 h-5" />,
+    icon: <Smartphone stroke="#e5e7eb" className="stroke-gray-200 w-5 h-5" />,
     color: "#4338ca", //indigo-700
   },
 };

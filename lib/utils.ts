@@ -1,4 +1,4 @@
-import { SAMPALE_HABITS } from "@/public/assets/data/habits";
+import { SAMPALE_HABITS } from "@/public/assets/data";
 import { HabitType } from "@/types";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";

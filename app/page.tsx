@@ -1,13 +1,15 @@
-import { Heading1 } from '@/components/Typography'
+import { Heading1 } from "@/components/Typography";
+import { getAllHabits } from "@/prisma/habits";
 
-type Props = {}
+const Home = async () => {
+  const habits = await getAllHabits();
 
-const Home = (props: Props) => {
   return (
     <div>
       <Heading1>Home</Heading1>
+      <p>{JSON.stringify(habits)}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
